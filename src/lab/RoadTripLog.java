@@ -4,34 +4,34 @@ public class RoadTripLog {
 	
 	
 	
-	private double distance;
-	private double Totalfuel;
+	private double TotalDistance;
+	private double TotalFuel;
 	private String tripName;
 	
 	public RoadTripLog(String name) {
-		this.distance = 0;
-		this.Totalfuel = 0;
+		this.TotalDistance = 0;
+		this.TotalFuel = 0;
 		this.tripName = name;
 		
 	}
 	public double addDistance(double dis) {
-		return distance += dis;
+		return TotalDistance += dis;
 	}
 	public double addFuel(double fuel) {
-		return Totalfuel +=fuel;
+		return TotalFuel +=fuel;
 	}
-	public double getDistance() {
-		return distance;
+	public double getTotalDistance() {
+		return TotalDistance;
 	}
-	public double getTotalfuel() {
-		return Totalfuel;
+	public double getTotalFuel() {
+		return TotalFuel;
 	}
 	public double getMPG() {
-		return Math.round((distance/Totalfuel) * 10.0) / 10.0;
+		return Math.round((TotalDistance/TotalFuel) * 10.0) / 10.0;
 	}
 	
 	public String toString() {
-		return ("Trip: "+ tripName + "/n Distance: " + distance + "/n Fuel Used: " + Totalfuel +  "MPG: "  + Math.round((distance/Totalfuel)  * 10.0)/ 10.0);
+		return ("Trip: "+ tripName + "/n Distance: " + TotalDistance + "/n Fuel Used: " + TotalFuel +  "MPG: "  + Math.round((TotalDistance/TotalFuel)  * 10.0)/ 10.0);
 	}
 	
 	
